@@ -149,6 +149,25 @@ I would recommend not using ssh to interact with container as a shell.  I would 
 docker exec -it parrot bash
 ```
 
+### Run as a non-privileged user
 
-Last Updated: July 5, 2022
+Setup a user account in the docker that matches a user account on your host...
+
+```bash
+useradd -m -d /home/thepcn3rd -u 1000 thepcn3rd
+```
+
+Then setup the user account to have sudo privileges...
+
+```bash
+usermod -aG sudo thepcn3rd
+```
+
+You will need to re-establish the ssh keys for the new user account and then modify the initial command to launch docker to the following...
+```bash
+docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --rm -ti --name parrot -v $PWD/parrotWork:/work --net parrotNetwork --ip 172.31.1.10 --user 1000:1000 parrotv1
+```
+
+
+Last Updated: July 19, 2022
 
