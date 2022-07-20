@@ -56,9 +56,8 @@ root@afc9a2444258c
 #
 ```
 
-To install the packages that you need to meet the objectives above run the following commands in the interactive shell in docker.  The below commands take about 10+ minutes to execute.
+To install the packages that you need to meet the objectives above run the following commands in the interactive shell in docker.  The below commands take about 10+ minutes to execute.  Execute after running "apt update"
 ```bash
-apt update
 apt install powershell netcat openvpn curl openssl ca-certificates fontconfig libxext6 libxrender1 libxtst6 parrot-interface-common ssh openjdk-11-jdk jupyter-notebook rlwrap default-mysql-client exiftool ffuf ldap-utils
 ```
 
