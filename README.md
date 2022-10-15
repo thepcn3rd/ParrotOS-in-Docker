@@ -163,6 +163,9 @@ Setup a user account in the docker that matches a user account on your host...
 
 ```bash
 useradd -m -d /home/thepcn3rd -u 1000 thepcn3rd
+
+# Set password for the user account created
+passwd thepcn3rd
 ```
 
 Then setup the user account to have sudo privileges...
