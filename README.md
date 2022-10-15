@@ -74,7 +74,7 @@ chmod 400 /root/.ssh/authorized_keys
 In the work folder on the host from the host download burpsuite and place the hackthebox ovpn file inside this file.  To download burpsuite as a stand-alone java file run the following curl command
 
 ```bash
-curl https://portswigger.net/burp/releases/download -o /work/burpsuite/burpsuite_community.jar
+curl https://portswigger.net/burp/releases/download -o ~/parrotWork/burpsuite/burpsuite_community.jar
 ```
 
 Install Python libraries through pip3 that are needed for the user
