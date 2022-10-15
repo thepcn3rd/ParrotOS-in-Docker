@@ -47,7 +47,8 @@ docker pull parrotsec/security
 After the download of the default image, run the following command to gain an interactive shell with the image running in a container.  I will not explain all of the command line switches.  The "--name" names the container that is running the image.  The "-v" creates a volume from a directory called work on my host and mounts it to the directory work in the container, this volume will contain files that I need to be keep saved.
 
 ```bash
-docker run --rm -ti --name parrot -v $PWD/work:/work parrotsec/security
+mkdir ~/parrotWork
+docker run --rm -ti --name parrot -v $PWD/parrotWork:/work parrotsec/security
 ```
 
 After gaining an interactive shell it should look something like the following.
