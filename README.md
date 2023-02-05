@@ -59,7 +59,7 @@ root@afc9a2444258c
 
 To install the packages that you need to meet the objectives above run the following commands in the interactive shell in docker.  The below commands take about 10+ minutes to execute.  Execute after running "apt update"
 ```bash
-apt install powershell netcat openvpn curl openssl ca-certificates fontconfig libxext6 libxrender1 libxtst6 parrot-interface-common ssh openjdk-11-jdk jupyter-notebook rlwrap default-mysql-client exiftool ffuf ldap-utils python3-pip smbclient remmina
+apt install powershell netcat openvpn curl openssl ca-certificates fontconfig libxext6 libxrender1 libxtst6 parrot-interface-common ssh openjdk-17-jdk jupyter-notebook rlwrap default-mysql-client exiftool ffuf ldap-utils python3-pip smbclient remmina
 ```
 
 The next commands will establish the ssh key between my Ubuntu host and the container.  (I would like to avoid using SSH, however I needed something to do X-Forwarding between the container and host.)  These commands are executed in the container.
@@ -75,13 +75,6 @@ In the work folder on the host from the host download burpsuite and place the ha
 
 ```bash
 curl https://portswigger.net/burp/releases/download -o ~/parrotWork/burpsuite/burpsuite_community.jar
-```
-
-Install Python libraries through pip3 that are needed for the user
-mdutils - Use a python library to write a markdown file to be opened with Obsidian on the host...
-
-```bash
-pip3 install mdutils
 ```
 
 
