@@ -175,5 +175,9 @@ docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --rm -ti --nam
 # Evaluating the zsh prompt
 Reference: https://dev.to/razcodes/how-to-upgrade-your-shell-and-prompt-in-kali-or-parrot-1oeg
 
+# Setup zsh autosuggestions
+Reference: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
+
+
 Last Updated: March 9, 2023
 
