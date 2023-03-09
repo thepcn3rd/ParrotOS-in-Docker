@@ -172,6 +172,8 @@ You will need to re-establish the ssh keys for the new user account and then mod
 docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --rm -ti --name parrot -v $PWD/parrotWork:/work --net parrotNetwork --ip 172.31.1.10 --user 1000:1000 parrot_v1
 ```
 
+# Evaluating the zsh prompt
+Reference: https://dev.to/razcodes/how-to-upgrade-your-shell-and-prompt-in-kali-or-parrot-1oeg
 
-Last Updated: July 29, 2022
+Last Updated: March 9, 2023
 
