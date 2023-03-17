@@ -27,6 +27,12 @@ sudo apt-get remove docker docker.io containerd runc
 sudo pacman -S docker
 ```
 
+### Enable to Load on Login
+```bash
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+```
+
 Then follow the steps for "Set up the repository" and step 1 of "Install Docker Engine".  After the installation you should be able to run sudo docker run hello-world and it will test everything and return a message that it is working as expected.
 
 
