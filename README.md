@@ -85,6 +85,7 @@ chmod 400 /root/.ssh/authorized_keys
 In the work folder on the host from the host download burpsuite and place the hackthebox ovpn file inside this file.  To download burpsuite as a stand-alone java file run the following curl command
 
 ```bash
+mkdir ~/parrotWork/burpsuite/
 curl https://portswigger.net/burp/releases/download -o ~/parrotWork/burpsuite/burpsuite_community.jar
 ```
 
