@@ -22,6 +22,11 @@ The uninstall of old versions was not exactly as shown, here is the command I us
 sudo apt-get remove docker docker.io containerd runc
 ```
 
+### Installation of Docker on Manjaro Host
+```bash
+sudo pacman -S docker
+```
+
 Then follow the steps for "Set up the repository" and step 1 of "Install Docker Engine".  After the installation you should be able to run sudo docker run hello-world and it will test everything and return a message that it is working as expected.
 
 
