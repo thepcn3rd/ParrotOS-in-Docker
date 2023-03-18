@@ -131,7 +131,7 @@ From the interactive shell in the container you need to start ssh and then can l
 openvpn lab_username.ovpn
 ```
 
-The interactive window with then show the VPN is connected and this window should be left open and alone...
+The interactive window will then show the VPN is connected and this window should be left open and alone... (I do it this way to see the status of the vpn, other methods can be used)
 
 ### SSH Interaction with the Container
 Now to interact with the container and launch firefox, burp or other GUI applications you can use SSH with X-window forwarding.  I wrote the following script called sshParrot.sh to launch these applications.  You can also run the commands individually.
