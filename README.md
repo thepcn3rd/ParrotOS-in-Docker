@@ -55,11 +55,12 @@ ParrotOS provides a docker image that can be pulled down with the following comm
 docker pull parrotsec/security
 ```
 
-After the download of the default image, run the following command to gain an interactive shell with the image running in a container.  I will not explain all of the command line switches.  The "--name" names the container that is running the image.  The "-v" creates a volume from a directory called work on my host and mounts it to the directory work in the container, this volume will contain files that I need to be keep saved.
+After the download of the default image, run the following command to gain an interactive shell with the image running in a container.  I will not explain all of the command line switches.  The "--name" names the container that is running the image.  The "-v" creates a volume from a directory called pWork on my host and mounts it to the directory work in the container, this volume will contain files that I need to be keep saved.
 
 ```bash
 mkdir ~/parrotWork
-docker run --rm -ti --name parrot -v $PWD/parrotWork:/work parrotsec/security
+mkdir ~/pWork
+docker run --rm -ti --name parrot -v $PWD/pWork:/work parrotsec/security
 ```
 
 After gaining an interactive shell it should look something like the following.
@@ -202,6 +203,22 @@ Reference: https://dev.to/razcodes/how-to-upgrade-your-shell-and-prompt-in-kali-
 ### Setup zsh autosuggestions
 Reference: https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 
+### parrotWork and pWork folders
+Due to permission differences of using the non-privileged user in docker and the files on the host developed this rsync script to make the transition easier.
 
-Last Updated: March 9, 2023
+```bash
+#!/bin/bash
+
+# rsync the data from parrotWork to pWork
+# Change permissions back for the rsync
+sudo chown -R thepcn3rd:thepcn3rd pWork
+# All folders in parrotWork to pWork
+rsync -arhv parrotWork/ pWork
+# Change permissions for parrot
+sudo chown -R 1001:1001 pWork
+
+```
+
+
+Last Updated: March 19, 2023
 
