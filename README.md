@@ -230,6 +230,25 @@ sudo chown -R 1001:1001 pWork
 
 ```
 
+### rysnc Script for a remote VM
 
-Last Updated: March 19, 2023
+```bash
+#!/bin/bash
+
+# All folders sync forward 
+userName="thepcn3rd"
+remoteIP="10.7.20.50"
+#remoteIP="10.0.2.4"
+
+#for folder in parrotWork ansible obsidian
+for folder in parrotWork 
+do
+	rsync -arhvut $folder/ $userName@$remoteIP:/home/$userName/parrotWork
+	#rsync -arhv $userName@$remoteIP:/home/$userName/parrotWork/ parrotWork
+done
+
+```
+
+
+Last Updated: July 6, 2024
 
